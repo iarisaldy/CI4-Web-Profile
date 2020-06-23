@@ -10,4 +10,6 @@ project 1
 make a website company profile
 with CI 4 and boostrap
 
+console.log("$agil_bugil")
+
 
