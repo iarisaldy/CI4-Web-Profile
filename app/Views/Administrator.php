@@ -254,7 +254,7 @@
 
 		<div class="heroe">
 
-			<h1>SELAMAT DATANG DIHALAMAN PROFILE</h1>
+			<h1>SELAMAT DATANG DIHALAMAN ADMIN</h1>
 
 			<h2>Welcome to CodeIgniter <?= CodeIgniter\CodeIgniter::CI_VERSION ?></h2>
 
