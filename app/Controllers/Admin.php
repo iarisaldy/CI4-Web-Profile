@@ -8,6 +8,11 @@ class Admin extends BaseController
 	{
 		return view('Administrator.php');
 	}
+
+	public function login()
+    {
+        return view('Login.php');
+    }
 	//--------------------------------------------------------------------
 
 }

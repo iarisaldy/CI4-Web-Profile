@@ -12,7 +12,7 @@
     <title>SB Admin 2 - Login</title>
 
     <!-- Custom fonts for this template-->
-    <link href="<?php echo base_url('assets/sbadmin/vendor/fontawesome-free/css/all.min.css'); ?> " rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url('assets/sbadmin/assets/fontawesome-free/css/all.min.css'); ?> " rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
@@ -52,7 +52,7 @@
                                                 <label class="custom-control-label" for="customCheck">Remember Me</label>
                                             </div>
                                         </div>
-                                        <a href="<?php echo base_url('Admin'); ?>" class="btn btn-primary btn-user btn-block">
+                                        <a href="<?php echo base_url('Admin/index'); ?>" class="btn btn-primary btn-user btn-block">
                                             Login
                                         </a>
                                         <hr>
@@ -83,11 +83,11 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="<?php echo base_url('assets/sbadmin/vendor/jquery/jquery.min.js'); ?>"></script>
-    <script src="<?php echo base_url('assets/sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
+    <script src="<?php echo base_url('assets/sbadmin/assets/jquery/jquery.min.js'); ?>"></script>
+    <script src="<?php echo base_url('assets/sbadmin/assets/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="<?php echo base_url('assets/sbadmin/vendor/jquery-easing/jquery.easing.min.js'); ?>"></script>
+    <script src="<?php echo base_url('assets/sbadmin/assets/jquery-easing/jquery.easing.min.js'); ?>"></script>
 
     <!-- Custom scripts for all pages-->
     <script src="<?php echo base_url('assets/sbadmin/js/sb-admin-2.min.js'); ?>"></script>
