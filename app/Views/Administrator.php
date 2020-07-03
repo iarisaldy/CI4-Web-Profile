@@ -9,14 +9,14 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>SB Admin 2 - Dashboard</title>
+	<title>Admin</title>
 
 	<!-- Custom fonts for this template-->
-	<link href="<?php echo base_url('assets/sbadmin'); ?>/assets/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+	<link href="<?php echo base_url('assets/administrator'); ?>/assets/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
 	<!-- Custom styles for this template-->
-	<link href="<?php echo base_url('assets/sbadmin'); ?>/css/sb-admin-2.min.css" rel="stylesheet">
+	<link href="<?php echo base_url('assets/administrator'); ?>/css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
@@ -298,7 +298,7 @@
 						<!-- Nav Item - User Information -->
 						<li class="nav-item dropdown no-arrow">
 							<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
+								<span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
 								<img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
 							</a>
 							<!-- Dropdown - User Information -->
@@ -604,7 +604,7 @@
 								</div>
 								<div class="card-body">
 									<div class="text-center">
-										<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;" src="<?php echo base_url('assets/sbadmin'); ?>/img/undraw_posting_photo.svg" alt="">
+										<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;" src="<?php echo base_url('assets/administrator'); ?>/img/undraw_posting_photo.svg" alt="">
 									</div>
 									<p>Add some quality, svg illustrations to your project courtesy of <a target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a constantly updated collection of beautiful svg images that you can use completely free and without attribution!</p>
 									<a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on unDraw &rarr;</a>
@@ -662,31 +662,31 @@
 						<span aria-hidden="true">×</span>
 					</button>
 				</div>
-				<div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+				<div class="modal-body">Apakah kamu yakin untuk "Logout"</div>
 				<div class="modal-footer">
 					<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-					<a class="btn btn-primary" href="login.html">Logout</a>
+					<a class="btn btn-primary" href="index">Logout</a>
 				</div>
 			</div>
 		</div>
 	</div>
 
 	<!-- Bootstrap core JavaScript-->
-	<script src="<?php echo base_url('assets/sbadmin'); ?>/assets/jquery/jquery.min.js"></script>
-	<script src="<?php echo base_url('assets/sbadmin'); ?>/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="<?php echo base_url('assets/administrator'); ?>/assets/jquery/jquery.min.js"></script>
+	<script src="<?php echo base_url('assets/administrator'); ?>/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 	<!-- Core plugin JavaScript-->
-	<script src="<?php echo base_url('assets/sbadmin'); ?>/assets/jquery-easing/jquery.easing.min.js"></script>
+	<script src="<?php echo base_url('assets/administrator'); ?>/assets/jquery-easing/jquery.easing.min.js"></script>
 
 	<!-- Custom scripts for all pages-->
-	<script src="<?php echo base_url('assets/sbadmin'); ?>/js/sb-admin-2.min.js"></script>
+	<script src="<?php echo base_url('assets/administrator'); ?>/js/sb-admin-2.min.js"></script>
 
 	<!-- Page level plugins -->
-	<script src="<?php echo base_url('assets/sbadmin'); ?>/assets/chart.js/Chart.min.js"></script>
+	<script src="<?php echo base_url('assets/administrator'); ?>/assets/chart.js/Chart.min.js"></script>
 
 	<!-- Page level custom scripts -->
-	<script src="<?php echo base_url('assets/sbadmin'); ?>/js/demo/chart-area-demo.js"></script>
-	<script src="<?php echo base_url('assets/sbadmin'); ?>/js/demo/chart-pie-demo.js"></script>
+	<script src="<?php echo base_url('assets/administrator'); ?>/js/demo/chart-area-demo.js"></script>
+	<script src="<?php echo base_url('assets/administrator'); ?>/js/demo/chart-pie-demo.js"></script>
 
 </body>
 

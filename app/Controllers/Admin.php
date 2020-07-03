@@ -9,13 +9,13 @@ class Admin extends BaseController
 		helper('form');
 	}
 
-	public function login()
+	public function index()
 	{
 		$data = ['user' => ''];
 		return view('Login.php', $data);
 	}
 
-	public function get_user()
+	public function login()
 	{
 		$email   = $this->request->getPost('email');
 		$password  = $this->request->getPost('password');
