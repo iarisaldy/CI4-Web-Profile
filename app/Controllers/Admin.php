@@ -11,7 +11,8 @@ class Admin extends BaseController
 
 	public function login()
 	{
-		return view('Login.php');
+		$data = ['user' => ''];
+		return view('Login.php', $data);
 	}
 
 	public function get_user()
@@ -19,10 +20,13 @@ class Admin extends BaseController
 		$email   = $this->request->getPost('email');
 		$password  = $this->request->getPost('password');
 
+
 		if ($email == 'admin' && $password == 'admin') {
-			return view('Administrator.php');
+			$data = ['user' => $email];
+			return view('Administrator.php', $data);
 		} else {
-			echo "error gk bisa login";
+			$data = ['user' => 'username dan password salah'];
+			return view('Login.php', $data);
 		}
 	}
 }

@@ -40,13 +40,15 @@
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                     </div>
                                     <form action="/Admin/get_user" method="post">
-                                        <div class="form-group">
-                                            <input type="text" name="email" value="" class="form-control form-control-user" id="email" aria-describedby="emailHelp" placeholder="Enter Email Address...">
+                                        <div class="form-group was-validated">
+                                            <?= $user ?>
+                                            <input type="text" name="email" value="" class="form-control form-control-user" id="email" aria-describedby="emailHelp" placeholder="Enter Email Address..." required>
                                         </div>
-                                        <div class="form-group">
-                                            <input type="password" name="password" value="" class="form-control form-control-user" id="assword" placeholder="Password">
+                                        <div class="form-group was-validated">
+                                            <input type="password" name="password" value="" class="form-control form-control-user" id="assword" placeholder="Password" required>
                                         </div>
-                                        <div class="form-group">
+
+                                        <div class="form-group ">
                                             <div class="custom-control custom-checkbox small">
                                                 <input type="checkbox" class="custom-control-input" id="customCheck">
                                                 <label class="custom-control-label" for="customCheck">Remember Me</label>
