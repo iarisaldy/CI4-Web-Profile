@@ -12,7 +12,7 @@ class Admin extends BaseController
 	public function index()
 	{
 		$data = ['user' => ''];
-		return view('Login.php', $data);
+		return view('BE/Login.php', $data);
 	}
 
 	public function login()
@@ -23,10 +23,10 @@ class Admin extends BaseController
 
 		if ($email == 'admin' && $password == 'admin') {
 			$data = ['user' => $email];
-			return view('Administrator.php', $data);
+			return view('BE/Administrator', $data);
 		} else {
 			$data = ['user' => 'username dan password salah'];
-			return view('Login.php', $data);
+			return view('BE/Login', $data);
 		}
 	}
 }
