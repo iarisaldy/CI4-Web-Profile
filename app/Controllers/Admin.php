@@ -29,4 +29,9 @@ class Admin extends BaseController
 			return view('BE/Login', $data);
 		}
 	}
+
+	public function User()
+	{
+		return view('BE/User.php');
+	}
 }
