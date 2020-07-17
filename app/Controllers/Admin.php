@@ -34,4 +34,9 @@ class Admin extends BaseController
 	{
 		return view('BE/Pages/DataUser.php');
 	}
+
+	public function TambahUser()
+	{
+		return view('BE/Pages/TambahUser.php');
+	}
 }
