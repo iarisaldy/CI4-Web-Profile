@@ -4,32 +4,33 @@ use CodeIgniter\Model;
 
 class UserModel extends Model{
   protected $table = 'user';
-  protected $allowedFields = ['firstname', 'lastname', 'email', 'password', 'updated_at'];
-  protected $beforeInsert = ['beforeInsert'];
-  protected $beforeUpdate = ['beforeUpdate'];
+    
+    public function getUser($id = false)
+    {
+        if($id === false){
+            return $this->findAll();
+        }else{
+            return $this->getWhere(['product_id' => $id]);
+        }   
+    }
 
+    public function saveUser($data)
+    {
+        $query = $this->db->table($this->table)->insert($data);
+        return $query;
+    }
 
+    public function updateUser($data, $id)
+    {
+        $query = $this->db->table($this->table)->update($data, array('product_id' => $id));
+        return $query;
+    }
 
-
-  protected function beforeInsert(array $data){
-    $data = $this->passwordHash($data);
-    $data['data']['created_at'] = date('Y-m-d H:i:s');
-
-    return $data;
-  }
-
-  protected function beforeUpdate(array $data){
-    $data = $this->passwordHash($data);
-    $data['data']['updated_at'] = date('Y-m-d H:i:s');
-    return $data;
-  }
-
-  protected function passwordHash(array $data){
-    if(isset($data['data']['password']))
-      $data['data']['password'] = password_hash($data['data']['password'], PASSWORD_DEFAULT);
-
-    return $data;
-  }
+    public function deleteUser($id)
+    {
+        $query = $this->db->table($this->table)->delete(array('product_id' => $id));
+        return $query;
+    } 
 
 
 }
