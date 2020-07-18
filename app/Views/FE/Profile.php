@@ -93,13 +93,13 @@
 				<div class="row about-container">
 
 					<div class="col-lg-6 content order-lg-1 order-2">
-						<h2 class="title">Few Words About Us</h2>
+						<h2 class="title">About Us</h2>
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 						</p>
 
 						<div class="icon-box wow fadeInUp">
-							<div class="icon"><i class="fa fa-shopping-bag"></i></div>
+							<div class="icon"><i class="fa fa-cogs"></i></div>
 							<h4 class="title"><a href="">Eiusmod Tempor</a></h4>
 							<p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
 						</div>
