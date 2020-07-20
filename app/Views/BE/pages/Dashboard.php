@@ -305,10 +305,9 @@
 
                 </div>
             </div>
-
         </div>
-        <!-- /.container-fluid -->
-
     </div>
-    <!-- End of Main Content -->
-    <?= $this->endSection() ?>
+    <!-- /.container-fluid -->
+</div>
+<!-- End of Main Content -->
+<?= $this->endSection() ?>
