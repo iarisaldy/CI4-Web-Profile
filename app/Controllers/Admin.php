@@ -1,6 +1,6 @@
-<?php
+<?php namespace App\Controllers;
 
-namespace App\Controllers;
+use App\Models\UserModel;
 
 class Admin extends BaseController
 {
@@ -32,7 +32,9 @@ class Admin extends BaseController
 
 	public function User()
 	{
-		return view('BE/Pages/DataUser.php');
+		$model = new UserModel();
+        $data['user'] = $model->getUser();
+		echo view('BE/Pages/DataUser.php',$data);
 	}
 
 	public function TambahUser()
