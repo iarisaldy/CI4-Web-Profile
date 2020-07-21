@@ -1,5 +1,6 @@
 <?php namespace App\Controllers;
 
+use CodeIgniter\Controller;
 use App\Models\UserModel;
 
 class Admin extends BaseController
@@ -7,6 +8,7 @@ class Admin extends BaseController
 	public function __construct()
 	{
 		helper('form');
+		$this->user = new UserModel();
 	}
 
 	public function index()
@@ -32,8 +34,7 @@ class Admin extends BaseController
 
 	public function User()
 	{
-		$model = new UserModel();
-        $data['user'] = $model->getUser();
+        $data['user'] = $this->user->getUser();
 		echo view('BE/Pages/DataUser.php',$data);
 	}
 

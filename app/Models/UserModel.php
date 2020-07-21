@@ -9,9 +9,16 @@ class UserModel extends Model{
     public function getUser($id = false)
     {
         if($id === false){
-            return $this->findAll();
-        }else{
-            return $this->getWhere(['id_user' => $id]);
-        }   
-    }
+            return $this->table('user')
+                        ->get()
+                        ->getResultArray();
+        } else {
+            return $this->table('user')
+                        ->where('id_user', $id)
+                        ->get()
+                        ->getRowArray();
+     
+                   }
+                               
+    }    
 }
