@@ -43,9 +43,9 @@ class Admin extends BaseController
 		return view('BE/Pages/TambahUser.php');
 	}
 
-	public function Home()
+	public function Konten()
 	{
-		return view('BE/Pages/Home');
+		return view('BE/Pages/Konten');
 	}
 
 	public function Dashboard()

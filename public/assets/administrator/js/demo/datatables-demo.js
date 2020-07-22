@@ -6,3 +6,11 @@ $(document).ready(function () {
 $(document).ready(function () {
   $('#Table2').DataTable();
 });
+
+$(document).ready(function () {
+  $('#Table3').DataTable();
+});
+
+$(document).ready(function () {
+  $('#Table4').DataTable();
+});

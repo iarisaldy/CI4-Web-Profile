@@ -56,21 +56,9 @@
 
 			<!-- Nav Item - Pages Collapse Menu -->
 			<li class="nav-item">
-				<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+				<a class="nav-link" href="Konten">
 					<i class="fas fa-fw fa-cog"></i>
-					<span>Konten</span>
-				</a>
-				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-					<div class="bg-white py-2 collapse-inner rounded">
-						<h6 class="collapse-header">Custom Components:</h6>
-						<a class="collapse-item" href="Home">Home</a>
-						<a class="collapse-item" href="cards.html">About</a>
-						<a class="collapse-item" href="cards.html">Services</a>
-						<a class="collapse-item" href="cards.html">Portofolio</a>
-						<a class="collapse-item" href="cards.html">Team</a>
-						<a class="collapse-item" href="cards.html">Contacts Us</a>
-					</div>
-				</div>
+					<span>Konten</span></a>
 			</li>
 
 			<!-- Nav Item - Utilities Collapse Menu -->
@@ -98,6 +86,18 @@
 				Addons
 			</div>
 
+			<!-- Nav Item - Tables -->
+			<li class="nav-item">
+				<a class="nav-link" href="TambahUser">
+					<i class="fas fa-fw fa-user"></i>
+					<span>Admin</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="User">
+					<i class="fas fa-fw fa-users"></i>
+					<span>User</span></a>
+			</li>
+
 			<!-- Nav Item - Pages Collapse Menu -->
 			<li class="nav-item">
 				<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
@@ -123,18 +123,6 @@
 				<a class="nav-link" href="charts.html">
 					<i class="fas fa-fw fa-chart-area"></i>
 					<span>Charts</span></a>
-			</li>
-
-			<!-- Nav Item - Tables -->
-			<li class="nav-item">
-				<a class="nav-link" href="User">
-					<i class="fas fa-fw fa-table"></i>
-					<span>User</span></a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="TambahUser">
-					<i class="fas fa-fw fa-table"></i>
-					<span>User</span></a>
 			</li>
 
 			<!-- Divider -->
@@ -419,6 +407,39 @@
 		</div>
 	</div>
 
+	<!-- Tambah Portofolio Modal-->
+	<div class="modal fade" id="PortofolioModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Tambah Portofolio?</h5>
+					<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<label for="basic-url">Judul</label>
+					<div class="input-group mb-3">
+						<input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+					</div>
+
+					<label for="basic-url">Upload Foto</label>
+					<div class="input-group mb-3">
+						<div class="custom-file">
+							<input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+							<label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+						</div>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+					<a class="btn btn-primary" href="Index">Save</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<!-- Edit Modal-->
 	<div class="modal fade" id="EditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
@@ -442,6 +463,11 @@
 							<label class="custom-file-label" for="inputGroupFile01">Choose file</label>
 						</div>
 					</div>
+
+					<label for="basic-url">Input Text</label>
+					<div class="input-group">
+						<textarea class="form-control" aria-label="with textarea"></textarea>
+					</div>
 				</div>
 				<div class="modal-footer">
 					<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
@@ -451,45 +477,92 @@
 		</div>
 	</div>
 
-	<!-- Delete Modal-->
-	<div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<!-- Edit Sosmed Modal-->
+	<div class="modal fade" id="SosmedModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Delete ?</h5>
+					<h5 class="modal-title" id="exampleModalLabel">Edit Sosial Media ?</h5>
 					<button class="close" type="button" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">×</span>
 					</button>
 				</div>
-				<div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-				<div class="modal-footer">
-					<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-					<a class="btn btn-primary" href="Index">Logout</a>
+				<div class="modal-body">
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1">@</span>
+						</div>
+						<input type="text" class="form-control" placeholder="Twitter" aria-label="Username" aria-describedby="basic-addon1">
+					</div>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1">@</span>
+						</div>
+						<input type="text" class="form-control" placeholder="Facebook" aria-label="Username" aria-describedby="basic-addon1">
+					</div>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1">@</i></span>
+						</div>
+						<input type="text" class="form-control" placeholder="Google+" aria-label="Username" aria-describedby="basic-addon1">
+					</div>
+
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1">@</i></span>
+						</div>
+						<input type="text" class="form-control" placeholder="LinkedIn" aria-label="Username" aria-describedby="basic-addon1">
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+						<a class="btn btn-primary" href="Index">Save</a>
+					</div>
+
 				</div>
 			</div>
 		</div>
-	</div>
+
+		<!-- Delete Modal-->
+		<div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Delete ?</h5>
+						<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+					</div>
+					<div class="modal-body">Apakah anda yakin untuk menghapus ?</div>
+					<div class="modal-footer">
+						<button class="btn btn-secondary" type="button" data-dismiss="modal">Tidak</button>
+						<a class="btn btn-primary" href="Index">Ya</a>
+					</div>
+				</div>
+			</div>
+		</div>
 
 
-	<!-- Bootstrap core JavaScript-->
-	<script src="<?php echo base_url('assets/administrator'); ?>/assets/jquery/jquery.min.js"></script>
-	<script src="<?php echo base_url('assets/administrator'); ?>/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<!-- Bootstrap core JavaScript-->
+		<script src="<?php echo base_url('assets/administrator'); ?>/assets/jquery/jquery.min.js"></script>
+		<script src="<?php echo base_url('assets/administrator'); ?>/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-	<!-- Core plugin JavaScript-->
-	<script src="<?php echo base_url('assets/administrator'); ?>/assets/jquery-easing/jquery.easing.min.js"></script>
+		<!-- Core plugin JavaScript-->
+		<script src="<?php echo base_url('assets/administrator'); ?>/assets/jquery-easing/jquery.easing.min.js"></script>
 
-	<!-- Custom scripts for all pages-->
-	<script src="<?php echo base_url('assets/administrator'); ?>/js/sb-admin-2.min.js"></script>
+		<!-- Custom scripts for all pages-->
+		<script src="<?php echo base_url('assets/administrator'); ?>/js/sb-admin-2.min.js"></script>
 
-	<!-- Page level plugins -->
-	<script src="<?php echo base_url('assets/administrator'); ?>/assets/chart.js/Chart.min.js"></script>
-	<script src="<?php echo base_url(); ?>/assets/administrator/assets/datatables/jquery.dataTables.min.js"></script>
-	<script src="<?php echo base_url(); ?>/assets/administrator/assets/datatables/dataTables.bootstrap4.min.js"></script>
+		<!-- Page level plugins -->
+		<script src="<?php echo base_url('assets/administrator'); ?>/assets/chart.js/Chart.min.js"></script>
+		<script src="<?php echo base_url(); ?>/assets/administrator/assets/datatables/jquery.dataTables.min.js"></script>
+		<script src="<?php echo base_url(); ?>/assets/administrator/assets/datatables/dataTables.bootstrap4.min.js"></script>
 
-	<!-- Page level custom scripts -->
-	<script src="<?php echo base_url('assets/administrator'); ?>/js/demo/chart-area-demo.js"></script>
-	<script src="<?php echo base_url('assets/administrator'); ?>/js/demo/chart-pie-demo.js"></script>
-	<script src="<?php echo base_url(); ?>/assets/administrator/js/demo/datatables-demo.js"></script>
+		<!-- Page level custom scripts -->
+		<script src="<?php echo base_url('assets/administrator'); ?>/js/demo/chart-area-demo.js"></script>
+		<script src="<?php echo base_url('assets/administrator'); ?>/js/demo/chart-pie-demo.js"></script>
+		<script src="<?php echo base_url(); ?>/assets/administrator/js/demo/datatables-demo.js"></script>
 
 
 </body>
