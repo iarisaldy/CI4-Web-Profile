@@ -86,6 +86,18 @@
 				Addons
 			</div>
 
+			<!-- Nav Item - Tables -->
+			<li class="nav-item">
+				<a class="nav-link" href="TambahUser">
+					<i class="fas fa-fw fa-user"></i>
+					<span>Admin</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="User">
+					<i class="fas fa-fw fa-users"></i>
+					<span>User</span></a>
+			</li>
+
 			<!-- Nav Item - Pages Collapse Menu -->
 			<li class="nav-item">
 				<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
@@ -111,18 +123,6 @@
 				<a class="nav-link" href="charts.html">
 					<i class="fas fa-fw fa-chart-area"></i>
 					<span>Charts</span></a>
-			</li>
-
-			<!-- Nav Item - Tables -->
-			<li class="nav-item">
-				<a class="nav-link" href="User">
-					<i class="fas fa-fw fa-table"></i>
-					<span>User</span></a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="TambahUser">
-					<i class="fas fa-fw fa-table"></i>
-					<span>User</span></a>
 			</li>
 
 			<!-- Divider -->
