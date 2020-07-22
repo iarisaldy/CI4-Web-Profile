@@ -248,7 +248,13 @@
                     </div>
                 </div>
             </div>
-
+            <!-- Portofolio Modal -->
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                <h1 class="h3 mb-2 text-gray-800"></h1>
+                <button id="tambah" class="btn btn-primary" type="button" data-toggle="modal" data-target="#PortofolioModal">
+                    <a class="m-0 font-weight-bold text-light"> <i class="fas fa-plus fa-sm"></i> Tambah Portofolio</a>
+                </button>
+            </div>
             <!-- Portofolio DataTales -->
             <div class=" card shadow mb-4">
                 <div class="card-header py-3">
