@@ -19,4 +19,21 @@ class ProdukModel extends Model{
                         ->getRowArray();
         }                          
     }
+
+    public function insert_user($data)
+    {
+        return $this->db->table($this->table)->insert($data);
+    }
+
+    public function update_user($data, $id)
+    {
+        return $this->db->table($this->table)->update($data, ['id_user' => $id]);
+    }
+
+    public function delete_user($id)
+    {
+        return $this->db->table($this->table)->delete(['id_user' => $id]);
+    }
+
+
 }
