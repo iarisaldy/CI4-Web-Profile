@@ -2,6 +2,7 @@
 
 use CodeIgniter\Controller;
 use App\Models\UserModel;
+use App\Models\ProdukModel;
 
 class Admin extends BaseController
 {
@@ -9,6 +10,7 @@ class Admin extends BaseController
 	{
 		helper('form');
 		$this->user = new UserModel();
+		$this->produk = new ProdukModel();
 	}
 
 	public function index()
