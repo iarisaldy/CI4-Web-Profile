@@ -8,7 +8,7 @@ class UserModel extends Model{
 
     protected function hashPassword(array $data)
     {
-      $data['data']['password_hash'] = password_hash($data['data']['password'], PASSWORD_DEFAULT);
+      //$data['data']['password_hash'] = password_hash($data['data']['password'], PASSWORD_DEFAULT);
     }
     
     public function getUser($id = false)
@@ -26,18 +26,18 @@ class UserModel extends Model{
                                
     }    
 
-    public function insert_product($data)
+    public function insert_user($data)
     {
         return $this->db->table($this->table)->insert($data);
     }
 
-    public function update_product($data, $id)
+    public function update_user($data, $id)
     {
-        return $this->db->table($this->table)->update($data, ['product_id' => $id]);
+        return $this->db->table($this->table)->update($data, ['id_user' => $id]);
     }
 
-    public function delete_product($id)
+    public function delete_user($id)
     {
-        return $this->db->table($this->table)->delete(['product_id' => $id]);
+        return $this->db->table($this->table)->delete(['id_user' => $id]);
     }
 }
