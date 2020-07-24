@@ -10,7 +10,7 @@ class Admin extends BaseController
 	{
 		helper('form');
 		$this->user = new UserModel();
-		$this->produk = new ProdukModel();
+		//$this->produk = new ProdukModel();
 	}
 
 	public function index()
@@ -37,8 +37,7 @@ class Admin extends BaseController
 	public function User()
 	{
 		$data['user'] = $this->user->getUser();
-		$data['user_id'] = $this->product->getUser($id);
-		echo view('BE/Pages/DataUser.php',$data);
+		return view('BE/Pages/DataUser.php',$data);
 	}
 
 	public function TambahUser()
@@ -87,6 +86,12 @@ class Admin extends BaseController
             return redirect()->to(base_url('User')); 
         }
     }
+
+    public function editUser()
+	{
+		$data['user_id'] = $this->user->getUser($id);
+		return view('BE/Pages/DataUser.php',$data);
+	}
 
     public function updateUser($id)
     {
