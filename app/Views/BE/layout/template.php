@@ -33,7 +33,7 @@
 				<div class="sidebar-brand-icon rotate-n-15">
 					<i class="fas fa-laugh-wink"></i>
 				</div>
-				<div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+				<div class="sidebar-brand-text mx-3"><sup>Admin</sup></div>
 			</a>
 
 			<!-- Divider -->
@@ -61,7 +61,14 @@
 					<span>Konten</span></a>
 			</li>
 
-			<!-- Nav Item - Utilities Collapse Menu -->
+			<!-- Nav Item - Pages Collapse Menu -->
+			<li class="nav-item">
+				<a class="nav-link" href="KontenV2">
+					<i class="fas fa-fw fa-cog"></i>
+					<span>KontenV2</span></a>
+			</li>
+
+			<!-- Nav Item - Utilities Collapse Menu 
 			<li class="nav-item">
 				<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
 					<i class="fas fa-fw fa-wrench"></i>
@@ -76,7 +83,7 @@
 						<a class="collapse-item" href="utilities-other.html">Other</a>
 					</div>
 				</div>
-			</li>
+			</li> -->
 
 			<!-- Divider -->
 			<hr class="sidebar-divider">
@@ -98,7 +105,7 @@
 					<span>User</span></a>
 			</li>
 
-			<!-- Nav Item - Pages Collapse Menu -->
+			<!-- Nav Item - Pages Collapse Menu 
 			<li class="nav-item">
 				<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
 					<i class="fas fa-fw fa-folder"></i>
@@ -116,11 +123,11 @@
 						<a class="collapse-item" href="blank.html">Blank Page</a>
 					</div>
 				</div>
-			</li>
+			</li> -->
 
 			<!-- Nav Item - Charts -->
 			<li class="nav-item">
-				<a class="nav-link" href="charts.html">
+				<a class="nav-link" href="Chart">
 					<i class="fas fa-fw fa-chart-area"></i>
 					<span>Charts</span></a>
 			</li>

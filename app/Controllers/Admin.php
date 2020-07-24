@@ -32,12 +32,11 @@ class Admin extends BaseController
 			$data = ['user' => 'username dan password salah'];
 			return view('BE/Login', $data);
 		}
-	}
-
-	public function User()
+    }
+    
+    public function Dashboard()
 	{
-		$data['user'] = $this->user->getUser();
-		return view('BE/Pages/DataUser.php',$data);
+		return view('BE/Pages/Dashboard');
 	}
 
 	public function TambahUser()
@@ -48,14 +47,25 @@ class Admin extends BaseController
 	public function Konten()
 	{
 		return view('BE/Pages/Konten');
-	}
+    }
 
-	public function Dashboard()
+    public function KontenV2()
 	{
-		return view('BE/Pages/Dashboard');
+		return view('BE/Pages/KontenV2');
+    }
+    
+    public function Chart()
+	{
+		return view('BE/Pages/Chard');
 	}
 
-	//CRUD DATA USER
+    //CRUD DATA USER
+    
+    public function User()
+	{
+		$data['user'] = $this->user->getUser();
+		return view('BE/Pages/DataUser.php',$data);
+	}
 
 	public function addUser()
     {
