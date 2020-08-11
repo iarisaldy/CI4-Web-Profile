@@ -56,7 +56,7 @@ class User extends BaseController
        }
    }
 
-   public function editUser()
+   public function editUser($id)
    {
        $data['user_id'] = $this->user->getUser($id);
        return view('BE/Pages/DataUser.php',$data);

@@ -8,16 +8,14 @@ class Admin extends BaseController
 	{
         helper('form');
         $this->validation = \Config\Services::validation();
-        $this->session = session();
 	}
 
 	public function index()
 	{
-        if(session()->get('')){
+        if(session()->get('email')== ''){
             $data = ['user' => ''];
             return view('BE/Login.php', $data);
         }
-		
     }
     
     public function Dashboard()
@@ -34,7 +32,7 @@ class Admin extends BaseController
         
 		if ($email == 'admin' && $password == 'admin') {
             $data = ['user' => $email];
-            $this->session->set_userdata('email', $email);
+            session()->set('email', $email);
 			return view('BE/Pages/Dashboard.php', $data);
 		} else {
 			$data = ['user' => 'username dan password salah'];
@@ -44,7 +42,7 @@ class Admin extends BaseController
 
     public function loguot()
 	{
-        $this->session->remove('');
+        session()->destroy();
 		return view('BE/Login.php');
 	}
 
