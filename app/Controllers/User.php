@@ -1,12 +1,14 @@
 <?php
 
 namespace App\Controllers;
+use App\Models\UserModel;
 
 class User extends BaseController
 {
 	public function __construct()
 	{
-		helper('form');
+        helper('form');
+        $this->user = new UserModel();
 	}
 
 	public function index()
@@ -16,47 +18,92 @@ class User extends BaseController
         echo view('',$data);
     }
 
-    public function add_new()
-    {
-        echo view('');
-    }
+   //CRUD DATA USER
+    
+   public function User()
+   {
+       $data['user'] = $this->user->getUser();
+       return view('BE/Pages/DataUser.php',$data);
+   }
 
-    public function save()
-    {
-        $model = new UserModel();
-        $data = array(
-            'nama_user'  => $this->request->getPost('nama'),
-            'email' => $this->request->getPost('email'),
-            'password' => $this->request->getPost('password'),
-        );
-        $model->saveUser($data);
-        return redirect()->to('');
-    }
+   public function addUser()
+   {
+       // Mengambil value dari form dengan method POST
+       $nama = $this->request->getPost('nama');
+       $email = $this->request->getPost('email');
+       $password = $this->request->getPost('password');
 
-    public function edit($id)
-    {
-        $model = new UserModel();
-        $data['user'] = $model->getUser($id)->getRow();
-        echo view('', $data);
-    }
+       // Membuat array collection yang disiapkan untuk insert ke table
+       $data = [
+           'nama' => $nama,
+           'email' => $email,
+           'password' => $password
+       ];
 
-    public function update()
-    {
-        $model = new UserModel();
-        $id = $this->request->getPost('id_user');
-        $data = array(
-            'nama_user'  => $this->request->getPost('nama_edit'),
-            'email' => $this->request->getPost('email_edit'),
-            'password' => $this->request->getPost('password_edit'),
-        );
-        $model->updateProduct($data, $id);
-        return redirect()->to('');
-    }
+       /* 
+       Membuat variabel simpan yang isinya merupakan memanggil function 
+       insert_product dan membawa parameter data 
+       */
+       $simpan = $this->user->insert_user($data);
 
-    public function delete($id)
-    {
-        $model = new UserModel();
-        $model->deleteUser($id);
-        return redirect()->to('');
-    }
+       // Jika simpan berhasil, maka ...
+       if($simpan)
+       {
+           // Deklarasikan session flashdata dengan tipe success
+           session()->setFlashdata('success', 'Created product successfully');
+           // Redirect halaman ke product
+           return redirect()->to(base_url('User')); 
+       }
+   }
+
+   public function editUser($id)
+   {
+       $data['user_id'] = $this->user->getUser($id);
+       return view('BE/Pages/DataUser.php',$data);
+   }
+
+   public function updateUser($id)
+   {
+       // Mengambil value dari form dengan method POST
+       $nama = $this->request->getPost('nama_edit');
+       $email = $this->request->getPost('email_edit');
+       $password = $this->request->getPost('password_edit');
+
+       // Membuat array collection yang disiapkan untuk insert ke table
+       $data = [
+           'nama' => $nama,
+           'email' => $email,
+           'password' => $password
+       ];
+
+       /* 
+       Membuat variabel ubah yang isinya merupakan memanggil function 
+       update_product dan membawa parameter data beserta id
+       */
+       $ubah = $this->user->update_user($data, $id);
+       
+       // Jika berhasil melakukan ubah
+       if($ubah)
+       {
+           // Deklarasikan session flashdata dengan tipe info
+           session()->setFlashdata('info', 'Updated product successfully');
+           // Redirect ke halaman product
+           return redirect()->to(base_url('User')); 
+       }
+   }
+
+   public function deleteUser($id)
+   {
+       // Memanggil function delete_product() dengan parameter $id di dalam ProductModel dan menampungnya di variabel hapus
+       $hapus = $this->user->delete_user($id);
+
+       // Jika berhasil melakukan hapus
+       if($hapus)
+       {
+               // Deklarasikan session flashdata dengan tipe warning
+           session()->setFlashdata('warning', 'Deleted product successfully');
+           // Redirect ke halaman product
+           return redirect()->to(base_url('User'));
+       }
+   }
 }
