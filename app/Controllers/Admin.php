@@ -20,9 +20,11 @@ class Admin extends BaseController
     
     public function Dashboard()
 	{
-        if(session()->get('')){
-        return view('BE/Pages/Dashboard');
-        }
+        if(session()->get('email')== ''){
+			$data = ['user' => ''];
+            return view('BE/Login.php', $data);
+		}
+		return view('BE/Pages/Dashboard');
 	}
 
 	public function login()
@@ -42,8 +44,9 @@ class Admin extends BaseController
 
     public function loguot()
 	{
-        session()->destroy();
-		return view('BE/Login.php');
+		session()->destroy();
+		$data = ['user' => ''];
+        return view('BE/Login.php', $data);
 	}
 
     

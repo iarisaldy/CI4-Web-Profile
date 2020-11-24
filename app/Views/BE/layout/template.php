@@ -95,12 +95,12 @@
 
 			<!-- Nav Item - Tables -->
 			<li class="nav-item">
-				<a class="nav-link" href="TambahUser">
+				<a class="nav-link" href="<?php echo base_url('User/User'); ?>">
 					<i class="fas fa-fw fa-user"></i>
 					<span>Admin</span></a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="User">
+				<a class="nav-link" href="<?php echo base_url('User/User'); ?>">
 					<i class="fas fa-fw fa-users"></i>
 					<span>User</span></a>
 			</li>
@@ -375,7 +375,7 @@
 				<div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
 				<div class="modal-footer">
 					<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-					<a class="btn btn-primary" href="Index">Logout</a>
+					<a class="btn btn-primary" href="loguot">Logout</a>
 				</div>
 			</div>
 		</div>

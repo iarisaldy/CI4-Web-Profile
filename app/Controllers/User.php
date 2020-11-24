@@ -15,7 +15,7 @@ class User extends BaseController
     {
         $model = new UserModel();
         $data['user'] = $model->getUser();
-        echo view('',$data);
+        return view('BE/Pages/TambahUser.php');
     }
 
    //CRUD DATA USER
